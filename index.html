@@ -2676,8 +2676,8 @@ async function fetchAndSetTitle(type, id, season, episode) {
 
         } else if (type === 'tv') {
             const [seriesRes, epRes] = await Promise.all([
-                fetch(`${TMDB_PROXY}/tv/${id}`),
-                fetch(`${TMDB_PROXY}/tv/${id}/season/${season}/episode/${episode}`)
+                fetch(`${TMDB_PROXY}/hkr4522/fegwgw/tv/${id}`),
+                fetch(`${TMDB_PROXY}hkr4522/fegwgw/tv/${id}/season/${season}/episode/${episode}`)
             ]);
             const series = seriesRes.ok ? await seriesRes.json() : {};
             const ep     = epRes.ok     ? await epRes.json()     : {};
