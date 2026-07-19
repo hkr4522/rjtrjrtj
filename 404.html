@@ -3769,22 +3769,5 @@ function showToast(msg) {
 }
 </script>
 <!-- Monetag Smart Link: once per visit, skip if embedded from pages.dev -->
-<script>
-(function () {
-    var STORAGE_KEY = 'monetag_onclick_shown';
-
-    var ref = document.referrer || '';
-    var isEmbedded = window.self !== window.top;
-    if (isEmbedded && ref.includes('pages.dev')) return;
-
-    if (sessionStorage.getItem(STORAGE_KEY)) return;
-
-    document.onclick = function () {
-        if (sessionStorage.getItem(STORAGE_KEY)) return;
-        sessionStorage.setItem(STORAGE_KEY, '1');
-        window.open('https://crn77.com/4/9069848', '_blank');
-    };
-})();
-</script>
 </body>
 </html>
