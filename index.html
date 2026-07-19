@@ -2571,7 +2571,9 @@ async function playEpisode(seriesId, seasonNumber, episodeNumber) {
         _epSeasonCache = {};
         _epLoadedSeason = null;
     }
-    const expectedPath = `/tv/${seriesId}/S${seasonNumber}/E${episodeNumber}`;
+    let basePath = window.location.pathname.replace(/\/(tv|movie)\/.*$/, '');
+    if (basePath === '/') basePath = '';
+    const expectedPath = `${basePath}/tv/${seriesId}/S${seasonNumber}/E${episodeNumber}`;
     if (window.location.pathname !== expectedPath) {
         history.replaceState(null, '', expectedPath);
     }
